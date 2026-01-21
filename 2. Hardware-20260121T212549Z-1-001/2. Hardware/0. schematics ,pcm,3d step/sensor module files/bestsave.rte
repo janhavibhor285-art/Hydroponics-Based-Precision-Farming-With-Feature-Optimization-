@@ -1,0 +1,155 @@
+ (routes 
+  (resolution mm 100000)
+  (parser
+  )
+  (parser
+  )
+  (structure_out
+   (layer TOP (type signal)
+   )
+   (layer I1 (type signal)
+   )
+   (layer I2 (type signal)
+   )
+   (layer I3 (type signal)
+   )
+   (layer I4 (type signal)
+   )
+   (layer I5 (type signal)
+   )
+   (layer I6 (type signal)
+   )
+   (layer I7 (type signal)
+   )
+   (layer I8 (type signal)
+   )
+   (layer I9 (type signal)
+   )
+   (layer I10 (type signal)
+   )
+   (layer I11 (type signal)
+   )
+   (layer I12 (type signal)
+   )
+   (layer I13 (type signal)
+   )
+   (layer I14 (type signal)
+   )
+   (layer BOT (type signal)
+   )
+  )
+  (library_out
+  (padstack $VIA#0_SIGNAL
+   (shape (circ TOP 76200 0 0))
+   (shape (circ I1 76200 0 0))
+   (shape (circ I2 76200 0 0))
+   (shape (circ I3 76200 0 0))
+   (shape (circ I4 76200 0 0))
+   (shape (circ I5 76200 0 0))
+   (shape (circ I6 76200 0 0))
+   (shape (circ I7 76200 0 0))
+   (shape (circ I8 76200 0 0))
+   (shape (circ I9 76200 0 0))
+   (shape (circ I10 76200 0 0))
+   (shape (circ I11 76200 0 0))
+   (shape (circ I12 76200 0 0))
+   (shape (circ I13 76200 0 0))
+   (shape (circ I14 76200 0 0))
+   (shape (circ BOT 76200 0 0))
+  )
+  (padstack PS6
+   (shape (circ TOP 76200 0 0))
+   (shape (circ I1 76200 0 0))
+   (shape (circ I2 76200 0 0))
+   (shape (circ I3 76200 0 0))
+   (shape (circ I4 76200 0 0))
+   (shape (circ I5 76200 0 0))
+   (shape (circ I6 76200 0 0))
+   (shape (circ I7 76200 0 0))
+   (shape (circ I8 76200 0 0))
+   (shape (circ I9 76200 0 0))
+   (shape (circ I10 76200 0 0))
+   (shape (circ I11 76200 0 0))
+   (shape (circ I12 76200 0 0))
+   (shape (circ I13 76200 0 0))
+   (shape (circ I14 76200 0 0))
+   (shape (circ BOT 76200 0 0))
+  )
+  )
+  (network_out
+   (Net #00000 
+   (rule
+   )
+   (wire (path BOT 88900  1313000 230000 -504000 230000 -504000 2500000)
+    (connect (terminal pin WEMOS-4) (terminal pin DHT11-1))
+   )
+   )
+   (Net #00001 
+   (rule
+   )
+   (wire (path TOP 88900  1313000 -532000 1313000 -889000 -1700000 -889000
+     -1700000 -192660)
+    (connect (terminal pin WEMOS-7) (terminal pin USB-3))
+   )
+   (wire (path BOT 88900  -1700000 -192660 -1700000 746000 -1500000 746000)
+    (connect (terminal pin USB-3) (terminal pin LDR-2))
+   )
+   (wire (path TOP 88900  -1500000 746000 -1507738 753738 -2049850 753738
+     -2286129 990017 -2286129 1141910 -2303006 1158787 -2303006 2643970
+     -2294567 2643970 -2066727 2871810 -1999219 2939318 -497159 2939318
+     -439318 2939318 -250000 2750000 -250000 2500000)
+    (connect (terminal pin LDR-2) (terminal pin DHT11-0))
+    (type protect)
+   )
+   (wire (path TOP 88900  1313000 -532000 2349500 -532000 2817500 -1000000
+     3750000 -1000000 5750000 1000000 5750000 1300000)
+    (connect (terminal pin WEMOS-7) (terminal pin "WATER LEVEL"-2))
+    (type protect)
+   )
+   )
+   (Net #00002 
+   (rule
+   )
+   (wire (path TOP 88900  1313000 -278000 2010777 -278000 2010777 1700000
+     5750000 1700000)
+    (connect (terminal pin WEMOS-6) (terminal pin "WATER LEVEL"-0))
+   )
+   (wire (path BOT 88900  -1100000 -192660 -1100001 -192660 -1100001 -381000
+     -1144451 -381000 -1144451 -192660 -1100001 -192660)
+    (connect (terminal wire) (terminal pin USB-0))
+   )
+   (wire (path BOT 88900  1313000 -278000 1298359 -292641 692675 -292641
+     523905 -461411 -184933 -461411 -453684 -192660 -1100000 -192660)
+    (connect (terminal pin WEMOS-6) (terminal wire))
+    (type protect)
+   )
+   (wire (path BOT 88900  -1100000 -192660 -1096295 -188955 -1096295 838123
+     -1258172 1000000 -1500000 1000000)
+    (connect (terminal wire) (terminal pin LDR-1))
+    (type protect)
+   )
+   (wire (path TOP 88900  -1500000 1000000 -1553521 1000000 -1990780 1437259
+     -2000000 1446479 -2000000 2000000 -1500000 2500000 -1012000 2500000)
+    (connect (terminal pin LDR-1) (terminal pin DHT11-3))
+    (type protect)
+   )
+   )
+   (Net #00004 
+   (rule
+   )
+   (wire (path TOP 88900  1313000 -24000 320097 -24000 320097 1254000
+     -1500000 1254000)
+    (connect (terminal pin WEMOS-5) (terminal pin LDR-0))
+   )
+   )
+   (Net #00018 
+   (rule
+   )
+   (wire (path BOT 88900  3599000 992000 3607000 1000000 5000000 1000000
+     5181976 1181976 5181976 1386627 5295349 1500000 5750000 1500000)
+    (connect (terminal pin WEMOS-14) (terminal pin "WATER LEVEL"-1))
+    (type protect)
+   )
+   )
+  )
+ )

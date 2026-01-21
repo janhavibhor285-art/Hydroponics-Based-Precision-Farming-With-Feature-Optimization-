@@ -1,0 +1,97 @@
+// This Simulation is made to simulate the integration of the hardware with cloud 
+// such as ThingSpeak for a BE E&TC Project.
+// The whole Simulation done and comments line added by Varad Chaskar (32013) 
+
+#include <DHT.h>                   //includes library for temperature and humidity sensor 
+#include <WiFi.h>
+#include "ThingSpeak.h"
+
+uint8_t LDR = 14;                 // Define pin for LDR
+
+#define DHT_PIN 12                // Define pin for DHT22 sensor
+DHT dht(DHT_PIN, DHT22);          // Create DHT object
+
+// Define WiFi credentials
+char ssid[] = "Wokwi-GUEST";      // your network SSID (name)
+char pass[] = "";                 // your network password
+int keyIndex = 0;                 // your network key Index number (needed only for WEP)
+WiFiClient  client;
+
+// ThingSpeak channel details
+unsigned long myChannelNumber = 2342655;               //channel number taken from cloud
+const char *myWriteAPIKey = "60I8D0M3F4S7Z3ET";        //Write API key of cloud
+const char *myCounterReadAPIKey = "F3V8IS62OL3SIAQO";  //Read API key from cloud
+
+void setup() {
+  // Initialize serial communication
+  Serial.begin(115200);
+  while (!Serial) {
+    ; // wait for serial port to connect. native USB port only
+  }
+
+  // Initialize ThingSpeak
+  ThingSpeak.begin(client);
+
+  // Set pin modes for various pins
+  pinMode(15, OUTPUT);
+  pinMode(2, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+}
+
+void loop() {
+  // Connect or reconnect to WiFi
+  if (WiFi.status() != WL_CONNECTED) {
+    Serial.print("Attempting to connect to SSID: ");
+    Serial.println(ssid);
+    while (WiFi.status() != WL_CONNECTED) {
+      WiFi.begin(ssid, pass);  // Connect to WPA/WPA2 network. Change this line if using open or WEP network
+      Serial.print(".");
+      delay(5000);
+    }
+    Serial.println("\nConnected.");
+  }
+
+  // Read temperature and humidity from DHT22 sensor
+  float t = dht.readTemperature();
+  float h = dht.readHumidity();
+
+  // Read light status from LDR
+  int L = digitalRead(LDR);
+  if (L == 0) {
+    L = 1;
+  } else {
+    L = 0;
+  }
+
+  // Set ThingSpeak fields with sensor values
+  ThingSpeak.setField(1, t);
+  ThingSpeak.setField(2, h);
+  ThingSpeak.setField(3, L);
+
+  // Write to the ThingSpeak channel
+  int x = ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
+  if (x == 200) {
+    Serial.println("Channel update successful.");
+  }
+
+  // Control LEDs based on conditions
+  if (L == 0) {
+    digitalWrite(2, HIGH);
+  } else {
+    digitalWrite(2, LOW);
+  }
+
+  if (t >= 25) {
+    digitalWrite(15, HIGH);
+  }
+  if (t < 25) {
+    digitalWrite(15, LOW);
+  }
+
+  // Read and control additional fields from ThingSpeak channel
+  int C = ThingSpeak.readLongField(myChannelNumber, 7, myCounterReadAPIKey);
+  digitalWrite(4, C);
+  int D = ThingSpeak.readLongField(myChannelNumber, 8, myCounterReadAPIKey);
+  digitalWrite(5, D);
+}

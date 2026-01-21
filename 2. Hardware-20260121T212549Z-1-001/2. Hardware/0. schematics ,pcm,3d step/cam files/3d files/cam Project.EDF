@@ -1,0 +1,283 @@
+(PCB cam_Project
+ (parser
+  (host_cad ARES)
+  (host_version 8.12 SP0)
+ )
+ (resolution mm 100000)
+ (unit mm)
+ (structure
+  (boundary (rect pcb -100.10160 49.89840 0.10160 100.10160))
+  (boundary (path signal 0.20320 -100.00000 50.00000 0.00000 50.00000 0.00000 100.00000
+   -100.00000 100.00000 -100.00000 50.00000))
+  (flip_style mirror_first)
+  (layer TOP (type signal) (direction horizontal))
+  (layer I1 (type signal) (direction off))
+  (layer I2 (type signal) (direction off))
+  (layer I3 (type signal) (direction off))
+  (layer I4 (type signal) (direction off))
+  (layer I5 (type signal) (direction off))
+  (layer I6 (type signal) (direction off))
+  (layer I7 (type signal) (direction off))
+  (layer I8 (type signal) (direction off))
+  (layer I9 (type signal) (direction off))
+  (layer I10 (type signal) (direction off))
+  (layer I11 (type signal) (direction off))
+  (layer I12 (type signal) (direction off))
+  (layer I13 (type signal) (direction off))
+  (layer I14 (type signal) (direction off))
+  (layer BOT (type signal) (direction vertical))
+  (grid via  0.63500)
+  (grid wire 0.63500)
+  (control
+   (via_at_smd off)
+   (off_grid on)
+  )
+  (via
+   $VIA#0_SIGNAL
+   (spare
+    $VIA#0_POWER
+   )
+  )
+  (rule
+   (width 0.25400)
+   (clearance 0.38100)
+   (clearance 0.25400 (type wire_via))
+   (clearance 0.25400 (type wire_smd))
+   (clearance 0.25400 (type wire_pin))
+   (clearance 0.25400 (type wire_wire))
+   (clearance 0.25400 (type via_pin))
+   (clearance 0.25400 (type via_via))
+   (clearance 0.25400 (type via_smd))
+  )
+ )
+ (placement
+  (component "DFR0602_ESP 32 CAM" (place "ESP 32 CAM" -55.00000 77.50000 front 0))
+  (component "CON4_1X4_USB_AM_USB 01" (place "USB 01" -80.00000 70.00000 front -270
+  ))
+  (component "CON4_1X4_HDR_2663_D-P-CO" (place "D-P-CO" -65.00000 82.50000 front -270
+  ))
+  (component "CON2_1X2_HDR_2663_PG-CO" (place "PG-CO" -17.50000 67.00000 front -90))
+ )
+ (library
+  (image "DFR0602_ESP 32 CAM" (side front)
+   (outline (rect TOP -3.12000 -23.41000 25.98000 18.69000))
+   (pin PS0 (rotate 0) 0 0.00000 0.00000)
+   (pin PS0 (rotate 0) 1 0.00000 -2.54000)
+   (pin PS0 (rotate 0) 2 0.00000 -5.08000)
+   (pin PS0 (rotate 0) 3 0.00000 -7.62000)
+   (pin PS0 (rotate 0) 4 0.00000 -10.16000)
+   (pin PS0 (rotate 0) 5 0.00000 -12.70000)
+   (pin PS0 (rotate 0) 6 0.00000 -15.24000)
+   (pin PS0 (rotate 0) 7 0.00000 -17.78000)
+   (pin PS0 (rotate 0) 8 22.86000 -17.78000)
+   (pin PS0 (rotate 0) 9 22.86000 -15.24000)
+   (pin PS0 (rotate 0) 10 22.86000 -12.70000)
+   (pin PS0 (rotate 0) 11 22.86000 -10.16000)
+   (pin PS0 (rotate 0) 12 22.86000 -7.62000)
+   (pin PS0 (rotate 0) 13 22.86000 -5.08000)
+   (pin PS0 (rotate 0) 14 22.86000 -2.54000)
+   (pin PS0 (rotate 0) 15 22.86000 0.00000)
+  )
+  (image "CON4_1X4_USB_AM_USB 01" (side front)
+   (outline (rect TOP -9.71220 -5.20700 7.71220 10.76960))
+   (pin PS1 (rotate 0) 0 -4.00000 -3.07340)
+   (pin PS1 (rotate 0) 1 -2.00000 -3.07340)
+   (pin PS1 (rotate 0) 2 0.00000 -3.07340)
+   (pin PS1 (rotate 0) 3 2.00000 -3.07340)
+   (pin PS2 (rotate 0) 4 -7.60400 0.00000)
+   (pin PS2 (rotate 0) 5 5.60400 0.00000)
+  )
+  (image "CON4_1X4_HDR_2663_D-P-CO" (side front)
+   (outline (rect TOP -3.82600 -2.54000 5.82600 1.33020))
+   (pin PS3 (rotate 0) 0 -2.00000 0.00000)
+   (pin PS3 (rotate 0) 1 0.00000 0.00000)
+   (pin PS3 (rotate 0) 2 2.00000 0.00000)
+   (pin PS3 (rotate 0) 3 4.00000 0.00000)
+  )
+  (image "CON2_1X2_HDR_2663_PG-CO" (side front)
+   (outline (rect TOP -1.81940 -2.54000 3.81940 1.33020))
+   (pin PS3 (rotate 0) 0 0.00000 0.00000)
+   (pin PS3 (rotate 0) 1 2.00000 0.00000)
+  )
+  (padstack PS0 (absolute on)
+   (shape (circle TOP 1.66000 0 0))
+   (shape (circle I1 1.66000 0 0))
+   (shape (circle I2 1.66000 0 0))
+   (shape (circle I3 1.66000 0 0))
+   (shape (circle I4 1.66000 0 0))
+   (shape (circle I5 1.66000 0 0))
+   (shape (circle I6 1.66000 0 0))
+   (shape (circle I7 1.66000 0 0))
+   (shape (circle I8 1.66000 0 0))
+   (shape (circle I9 1.66000 0 0))
+   (shape (circle I10 1.66000 0 0))
+   (shape (circle I11 1.66000 0 0))
+   (shape (circle I12 1.66000 0 0))
+   (shape (circle I13 1.66000 0 0))
+   (shape (circle I14 1.66000 0 0))
+   (shape (circle BOT 1.66000 0 0))
+  )
+  (padstack PS1 (absolute on)
+   (shape (circle TOP 1.21920 0 0))
+   (shape (circle BOT 1.21920 0 0))
+  )
+  (padstack PS2 (absolute on)
+   (shape (circle TOP 3.55600 0 0))
+   (shape (circle BOT 3.55600 0 0))
+  )
+  (padstack PS3 (absolute on)
+   (shape (circle TOP 1.39700 0 0))
+   (shape (circle BOT 1.39700 0 0))
+  )
+  (padstack $VIA#0_SIGNAL (absolute on)
+   (shape (circle TOP 0.76200 0 0))
+   (shape (circle I1 0.76200 0 0))
+   (shape (circle I2 0.76200 0 0))
+   (shape (circle I3 0.76200 0 0))
+   (shape (circle I4 0.76200 0 0))
+   (shape (circle I5 0.76200 0 0))
+   (shape (circle I6 0.76200 0 0))
+   (shape (circle I7 0.76200 0 0))
+   (shape (circle I8 0.76200 0 0))
+   (shape (circle I9 0.76200 0 0))
+   (shape (circle I10 0.76200 0 0))
+   (shape (circle I11 0.76200 0 0))
+   (shape (circle I12 0.76200 0 0))
+   (shape (circle I13 0.76200 0 0))
+   (shape (circle I14 0.76200 0 0))
+   (shape (circle BOT 0.76200 0 0))
+  )
+  (padstack $VIA#0_POWER (absolute on)
+   (shape (circle TOP 0.76200 0 0))
+   (shape (circle I1 0.76200 0 0))
+   (shape (circle I2 0.76200 0 0))
+   (shape (circle I3 0.76200 0 0))
+   (shape (circle I4 0.76200 0 0))
+   (shape (circle I5 0.76200 0 0))
+   (shape (circle I6 0.76200 0 0))
+   (shape (circle I7 0.76200 0 0))
+   (shape (circle I8 0.76200 0 0))
+   (shape (circle I9 0.76200 0 0))
+   (shape (circle I10 0.76200 0 0))
+   (shape (circle I11 0.76200 0 0))
+   (shape (circle I12 0.76200 0 0))
+   (shape (circle I13 0.76200 0 0))
+   (shape (circle I14 0.76200 0 0))
+   (shape (circle BOT 0.76200 0 0))
+  )
+ )
+ (network
+  (net "#00007"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins "ESP 32 CAM"-7 "USB 01"-3 "D-P-CO"-0)
+  )
+  (net "#00011"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins "ESP 32 CAM"-11 "PG-CO"-0)
+  )
+  (net "#00013"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins "ESP 32 CAM"-13 "D-P-CO"-3)
+  )
+  (net "#00014"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins "ESP 32 CAM"-14 "D-P-CO"-2)
+  )
+  (net "#00015"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins "ESP 32 CAM"-15 "USB 01"-0 "D-P-CO"-1)
+  )
+  (net "GND"
+   (circuit
+    (use_layer TOP BOT)
+    (use_via
+     $VIA#0_POWER
+    )
+   )
+   (pins "ESP 32 CAM"-10 "PG-CO"-1)
+  )
+  (class POWER
+   "GND"
+   (rule
+    (width 0.25400)
+    (clearance 0.38100)
+    (clearance 0.25400 (type wire_via))
+    (clearance 0.25400 (type wire_smd))
+    (clearance 0.25400 (type wire_pin))
+    (clearance 0.25400 (type wire_wire))
+    (clearance 0.25400 (type via_pin))
+    (clearance 0.25400 (type via_via))
+    (clearance 0.25400 (type via_smd))
+   )
+  )
+  (class SIGNAL
+   "#00007"
+   "#00011"
+   "#00013"
+   "#00014"
+   "#00015"
+   "{NC}"
+   "{VOID}"
+   (rule
+    (width 0.25400)
+    (clearance 0.38100)
+    (clearance 0.25400 (type wire_via))
+    (clearance 0.25400 (type wire_smd))
+    (clearance 0.25400 (type wire_pin))
+    (clearance 0.25400 (type wire_wire))
+    (clearance 0.25400 (type via_pin))
+    (clearance 0.25400 (type via_via))
+    (clearance 0.25400 (type via_smd))
+   )
+  )
+ )
+ (wiring
+   (wire (path TOP 0.25400 -65.00000 80.50000 -68.42661 80.50000 -76.92660 72.00000)
+   (net "#00007"))
+  (wire (path TOP 0.25400 -76.92660 72.00000 -76.92661 72.00000) (net "#00007"))
+   (wire (path TOP 0.25400 -32.14000 74.96000 -29.84500 77.25500 -29.84500 83.82000 -30.52500 84.50000
+   -65.00000 84.50000) (net "#00014"))
+   (wire (path TOP 0.25400 -32.14000 77.50000 -37.14000 82.50000 -65.00000 82.50000)
+   (net "#00015"))
+   (wire (path BOT 0.25400 -55.00000 59.72000 -65.00000 69.72000 -65.00000 80.50000)
+   (net "#00007"))
+   (wire (path BOT 0.25400 -32.14000 64.80000 -31.94000 65.00000 -17.50000 65.00000)
+   (net "GND") (type protect))
+   (wire (path BOT 0.25400 -32.14000 67.34000 -31.80000 67.00000 -17.50000 67.00000)
+   (net "#00011") (type protect))
+  (wire (path BOT 0.25400 -76.92660 66.00000 -76.92660 66.00001) (net "#00015"))
+   (wire (path BOT 0.25400 -46.22000 86.50000 -52.50000 86.50000) (net "#00013") (type protect)
+  )
+   (wire (path BOT 0.25400 -32.14000 72.42000 -23.40327 81.15673 -23.40327 85.78992 -24.11335 86.50000
+   -46.22000 86.50000) (net "#00013") (type protect))
+  (wire (path BOT 0.25400 -52.50000 86.50000 -65.00000 86.50000) (net "#00013"))
+   (wire (path BOT 0.25400 -65.00000 82.50000 -76.17764 82.50000 -84.72756 73.95008 -84.72756 69.09270
+    -84.72756 68.68793 -82.40007 66.36044 -82.03963 66.00000 -76.92660 66.00000) (net "#00015")
+   (type protect))
+ )
+)
